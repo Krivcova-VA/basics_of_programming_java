@@ -16,7 +16,7 @@ public class RepositoryImp {
         try (Statement statement =
                      connection.createStatement()) {
             ResultSet resultSet =
-                    statement.executeQuery("select * from boxes.boxes where id = " + id);
+                    statement.executeQuery("select * from department.departments where id = " + id);
             HashSet department = new HashSet();
             while (resultSet.next()) {
                 long uid = resultSet.getLong("id");
@@ -34,7 +34,7 @@ public class RepositoryImp {
         try (Statement statement =
                      connection.createStatement()) {
             ResultSet resultSet =
-                    statement.executeQuery("select * from boxes.boxes");
+                    statement.executeQuery("select * from departments.departments");
             HashSet department = new HashSet();
             while (resultSet.next()) {
                 long id = resultSet.getLong("id");
@@ -53,7 +53,7 @@ public class RepositoryImp {
             try (Statement statement =
                          connection.createStatement()) {
                 ResultSet resultSet =
-                        statement.executeQuery("select * from boxes.boxes where id = " );
+                        statement.executeQuery("select * from departments.departments where id = " );
 
                 while (resultSet.next()) {
                     long uid = resultSet.getLong("id");
